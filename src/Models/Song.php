@@ -1,5 +1,4 @@
 <?php
-include "Verse.php";
 
 class Song {
     public $verses = [];
@@ -11,7 +10,7 @@ class Song {
         return $this->verses[sizeof($this->verses)-1];
     }
 
-    public function print(){
+    public function toString(){
         foreach($this->verses as $verse) {
             echo $verse;
         }

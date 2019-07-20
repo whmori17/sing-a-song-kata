@@ -51,4 +51,4 @@ RUN touch /var/www/.bashrc && chown www-data /var/www/.bashrc
 USER www-data
 RUN echo 'alias phpunit="./vendor/bin/phpunit"' >> ~/.bashrc \
     && echo 'alias ll="ls -la"' >> ~/.bashrc \
-    && echo 'alias runTest="cd /var/www/refactoring-exercises && phpunit && cd -"' >> ~/.bashrc
+    && echo 'alias runTest="cd /var/www/sing-a-song-kata && phpunit && cd -"' >> ~/.bashrc
