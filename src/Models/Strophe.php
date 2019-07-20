@@ -3,13 +3,18 @@
 class Strophe
 {
     /**
+     * @var array
+     */
+    private $verses;
+
+    /**
      * @var string
      */
     private $content;
 
-    public function __construct(string $content)
+    public function __construct(array $verses = [])
     {
-        $this->content = $content;
+        $this->verses = $verses;
     }
 
     /**
@@ -17,6 +22,12 @@ class Strophe
      */
     public function getContent(): string
     {
+        $this->content = '';
+
+        foreach($this->verses as $verse) {
+            $this->content .= $verse->getContent();
+        }
+
         return $this->content;
     }
 

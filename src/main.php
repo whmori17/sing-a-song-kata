@@ -2,79 +2,73 @@
 
 $song = new Song();
 
-$song->addStrophe(
-    new Strophe(
-    "There was an old lady who swallowed a fly.\n" .
-            "I don't know why she swallowed a fly - perhaps she'll die!\n" .
-            "\n"
-    )
-);
+$verses1 = [
+    new Verse("There was an old lady who swallowed a fly.\n"),
+    new Verse("I don't know why she swallowed a fly - perhaps she'll die!\n\n"),
+];
+$strophe1 = new Strophe($verses1);
+$song->addStrophe($strophe1);
 
-$song->addStrophe(
-    new Strophe(
-        "There was an old lady who swallowed a spider;\n" .
-                "That wriggled and wiggled and tickled inside her.\n" .
-                "She swallowed the spider to catch the fly;\n" .
-                "I don't know why she swallowed a fly - perhaps she'll die!\n" .
-                "\n"
-    )
-);
+$verses2 = [
+    new Verse("There was an old lady who swallowed a spider;\n" ),
+    new Verse("That wriggled and wiggled and tickled inside her.\n" ),
+    new Verse("She swallowed the spider to catch the fly;\n" ),
+    new Verse("I don't know why she swallowed a fly - perhaps she'll die!\n\n" ),
+];
+$strophe2 = new Strophe($verses2);
+$song->addStrophe($strophe2);
 
-$song->addStrophe(
-    new Strophe(
-        "There was an old lady who swallowed a bird;\n" .
-                "How absurd to swallow a bird.\n" .
-                "She swallowed the bird to catch the spider,\n" .
-                "She swallowed the spider to catch the fly;\n" .
-                "I don't know why she swallowed a fly - perhaps she'll die!\n" .
-                "\n"
-    )
-);
+$verses3 = [
+    new Verse("There was an old lady who swallowed a bird;\n" ),
+    new Verse("How absurd to swallow a bird.\n" ),
+    new Verse("She swallowed the bird to catch the spider,\n" ),
+    new Verse("She swallowed the spider to catch the fly;\n" ),
+    new Verse("I don't know why she swallowed a fly - perhaps she'll die!\n\n" ),
+];
+$strophe3 = new Strophe($verses3);
+$song->addStrophe($strophe3);
 
-$song->addStrophe(
-    new Strophe(
-        "There was an old lady who swallowed a cat;\n" .
-                "Fancy that to swallow a cat!\n" .
-                "She swallowed the cat to catch the bird,\n" .
-                "She swallowed the bird to catch the spider,\n" .
-                "She swallowed the spider to catch the fly;\n" .
-                "I don't know why she swallowed a fly - perhaps she'll die!\n" .
-                "\n"
-    )
-);
+$verses4 = [
+    new Verse("There was an old lady who swallowed a cat;\n" ),
+    new Verse("Fancy that to swallow a cat!\n" ),
+    new Verse("She swallowed the cat to catch the bird,\n" ),
+    new Verse("She swallowed the bird to catch the spider,\n" ),
+    new Verse("She swallowed the spider to catch the fly;\n" ),
+    new Verse("I don't know why she swallowed a fly - perhaps she'll die!\n\n" ),
+];
+$strophe4 = new Strophe($verses4);
+$song->addStrophe($strophe4);
 
-$song->addStrophe(
-    new Strophe(
-        "There was an old lady who swallowed a dog;\n" .
-                "What a hog, to swallow a dog!\n" .
-                "She swallowed the dog to catch the cat,\n" .
-                "She swallowed the cat to catch the bird,\n" .
-                "She swallowed the bird to catch the spider,\n" .
-                "She swallowed the spider to catch the fly;\n" .
-                "I don't know why she swallowed a fly - perhaps she'll die!\n" .
-                "\n"
-    )
-);
+$verses5 = [
+    new Verse("There was an old lady who swallowed a dog;\n" ),
+    new Verse("What a hog, to swallow a dog!\n" ),
+    new Verse("She swallowed the dog to catch the cat,\n" ),
+    new Verse("She swallowed the cat to catch the bird,\n" ),
+    new Verse("She swallowed the bird to catch the spider,\n" ),
+    new Verse("She swallowed the spider to catch the fly;\n" ),
+    new Verse("I don't know why she swallowed a fly - perhaps she'll die!\n\n" ),
+];
+$strophe5 = new Strophe($verses5);
+$song->addStrophe($strophe5);
 
-$song->addStrophe(
-    new Strophe(
-        "There was an old lady who swallowed a cow;\n" .
-                "I don't know how she swallowed a cow!\n" .
-                "She swallowed the cow to catch the dog,\n" .
-                "She swallowed the dog to catch the cat,\n" .
-                "She swallowed the cat to catch the bird,\n" .
-                "She swallowed the bird to catch the spider,\n" .
-                "She swallowed the spider to catch the fly;\n" .
-                "I don't know why she swallowed a fly - perhaps she'll die!\n" .
-                "\n"
-    )
-);
+$verses6 = [
+    new Verse("There was an old lady who swallowed a cow;\n" ),
+    new Verse("I don't know how she swallowed a cow!\n" ),
+    new Verse("She swallowed the cow to catch the dog,\n" ),
+    new Verse("She swallowed the dog to catch the cat,\n" ),
+    new Verse("She swallowed the cat to catch the bird,\n" ),
+    new Verse("She swallowed the bird to catch the spider,\n" ),
+    new Verse("She swallowed the spider to catch the fly;\n" ),
+    new Verse("I don't know why she swallowed a fly - perhaps she'll die!\n\n" ),
+];
+$strophe6 = new Strophe($verses6);
+$song->addStrophe($strophe6);
 
-$song->addStrophe(
-    new Strophe(
-        "There was an old lady who swallowed a horse...\n" .
-                "...She's dead, of course!"
-    )
-);
+$verses7 = [
+    new Verse("There was an old lady who swallowed a horse...\n" ),
+    new Verse("...She's dead, of course!"),
+];
+$strophe7 = new Strophe($verses7);
+$song->addStrophe($strophe7);
 
 echo $song->toString();
