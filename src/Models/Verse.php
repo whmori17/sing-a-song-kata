@@ -5,7 +5,7 @@ class Verse
     /**
      * @var string
      */
-    private $content;
+    protected $content;
 
     public function __construct(string $content)
     {
