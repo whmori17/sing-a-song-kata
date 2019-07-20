@@ -17,6 +17,6 @@ class Song {
     }
 
     public function addVerse(Verse $verse) {
-
+        $this->verses[] = $verse;
     }
 }
