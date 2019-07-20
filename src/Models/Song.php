@@ -12,7 +12,11 @@ class Song {
 
     public function toString(){
         foreach($this->verses as $verse) {
-            echo $verse;
+            echo $verse->getContent();
         }
+    }
+
+    public function addVerse(Verse $verse) {
+
     }
 }
