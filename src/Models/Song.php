@@ -1,22 +1,22 @@
 <?php
 
 class Song {
-    public $verses = [];
+    public $strophes = [];
     
     public function __construct(){
     }
 
     public function getLastToward(){
-        return $this->verses[sizeof($this->verses)-1];
+        return $this->strophes[sizeof($this->strophes)-1];
     }
 
     public function toString(){
-        foreach($this->verses as $verse) {
-            echo $verse->getContent();
+        foreach($this->strophes as $strophe) {
+            echo $strophe->getContent();
         }
     }
 
-    public function addVerse(Verse $verse) {
-        $this->verses[] = $verse;
+    public function addStrophe(Strophe $strophe) {
+        $this->strophes[] = $strophe;
     }
 }
