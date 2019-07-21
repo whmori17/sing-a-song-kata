@@ -7,6 +7,10 @@ class Verse
      */
     protected $content;
 
+    /**
+     * Verse constructor.
+     * @param string $content
+     */
     public function __construct(string $content)
     {
         $this->content = $content;

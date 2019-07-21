@@ -7,6 +7,9 @@ class AnimalSongBuilder
      */
     private $song;
 
+    /**
+     * @var array
+     */
     private CONST VERSES_WITHOUT_ANIMALS = [
         "That wriggled and wiggled and tickled inside her.\n",
         "How absurd to swallow a %s.\n",
@@ -15,9 +18,16 @@ class AnimalSongBuilder
         "I don't know how she swallowed a %s!\n",
     ];
 
+    /**
+     * @var array
+     */
     private $alreadyAddedAnimalsVerses = [];
 
-    public function makeSong(array $animals)
+    /**
+     * @param array $animals
+     * @return Song
+     */
+    public function makeSong(array $animals): Song
     {
         $dontKnowSwallewedAnimalVerse = new DontKnowSwallowedAnimalVerse($animals[0]);
 
@@ -32,7 +42,13 @@ class AnimalSongBuilder
         return $this->song;
     }
 
-    private function addAnimalsVerseToStrophe(string $animal1, string $animal2, Strophe $strophe)
+    /**
+     * @param string $animal1
+     * @param string $animal2
+     * @param Strophe $strophe
+     * @return Strophe
+     */
+    private function addAnimalsVerseToStrophe(string $animal1, string $animal2, Strophe $strophe): Strophe
     {
         $verse = new SwallowedAndCatchAnimalVerse($animal1, $animal2);
         $strophe->addVerse($verse);
@@ -46,7 +62,10 @@ class AnimalSongBuilder
         return $strophe;
     }
 
-    private function addAndCreateStropheWithVerses(array $verses)
+    /**
+     * @param array $verses
+     */
+    private function addAndCreateStropheWithVerses(array $verses): void
     {
         $this->song->addStrophe(new Strophe($verses));
     }

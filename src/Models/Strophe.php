@@ -12,6 +12,10 @@ class Strophe
      */
     private $content;
 
+    /**
+     * Strophe constructor.
+     * @param array $verses
+     */
     public function __construct(array $verses = [])
     {
         $this->verses = $verses;
@@ -31,7 +35,11 @@ class Strophe
         return $this->content;
     }
 
-    public function addVerse(Verse $verse) {
+    /**
+     * @param Verse $verse
+     */
+    public function addVerse(Verse $verse): void
+    {
         $this->verses[] = $verse;
     }
 
