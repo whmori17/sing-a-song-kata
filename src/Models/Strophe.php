@@ -31,4 +31,8 @@ class Strophe
         return $this->content;
     }
 
+    public function addVerse(Verse $verse) {
+        $this->verses[] = $verse;
+    }
+
 }
