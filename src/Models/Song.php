@@ -1,10 +1,7 @@
 <?php
 
 class Song {
-    public $strophes = [];
-    
-    public function __construct(){
-    }
+    protected $strophes = [];
 
     public function getLastToward(){
         return $this->strophes[sizeof($this->strophes)-1];
