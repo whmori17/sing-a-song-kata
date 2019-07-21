@@ -10,7 +10,7 @@ class AnimalSongBuilder
     /**
      * @var array
      */
-    private CONST VERSES_WITHOUT_ANIMALS = [
+    private CONST VERSES_IN_THE_MIDDLE = [
         "That wriggled and wiggled and tickled inside her.\n",
         "How absurd to swallow a %s.\n",
         "Fancy that to swallow a %s!\n",
@@ -91,7 +91,7 @@ class AnimalSongBuilder
         for ($i = 1; $i < sizeof($animals) - 2; $i++) {
             $strophe = new Strophe();
 
-            $strophe->addVerse(new Verse(sprintf(self::VERSES_WITHOUT_ANIMALS[$i], $animals[$i])));
+            $strophe->addVerse(new Verse(sprintf(self::VERSES_IN_THE_MIDDLE[$i], $animals[$i])));
             $strophe = $this->addAnimalsVerseToStrophe($animals[$i], $animals[$i - 1], $strophe);
             $strophe->addVerse($dontKnowSwallewedAnimalVerse);
 
