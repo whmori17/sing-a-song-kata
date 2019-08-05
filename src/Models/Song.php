@@ -14,11 +14,18 @@ class Song {
         return $this->strophes[sizeof($this->strophes)-1];
     }
 
-    public function toString(): void
+    /**
+     * @return string
+     */
+    public function toString(): string
     {
+        $songStringed = '';
+
         foreach($this->strophes as $strophe) {
-            echo $strophe->getContent();
+            $songStringed .= $strophe->getContent();
         }
+
+        return $songStringed;
     }
 
     /**
