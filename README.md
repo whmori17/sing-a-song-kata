@@ -2,7 +2,7 @@
 - Build and run container: `docker-compose up -d`
 - Stop container: `docker-compose down`
 - Update container: `docker-compose up -d --force-recreate --build`
-- Container shell: `docker exec -ti php bash`
+- Container shell: `docker-compose exec php bash`
     - Exit container shell: `exit`
 
 # Run the tests

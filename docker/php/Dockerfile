@@ -52,3 +52,5 @@ USER www-data
 RUN echo 'alias phpunit="./vendor/bin/phpunit"' >> ~/.bashrc \
     && echo 'alias ll="ls -la"' >> ~/.bashrc \
     && echo 'alias runTest="cd /var/www/sing-a-song-kata && phpunit && cd -"' >> ~/.bashrc
+
+WORKDIR /var/www
